@@ -1,6 +1,6 @@
 # Lively Radio
 
-This is website for the BrickMMO Lively Radio brand. 
+This repo stores the website for the BrickMMO Lively Radio brand. 
 
 ---
 
