@@ -2,6 +2,9 @@
 
 This repo stores the website for the BrickMMO Lively Radio brand. 
 
+> This repo is available to view at  
+> [https://lively.brickmmo.com](https://lively.brickmmo.com)
+
 ---
 
 ## Project Stack
