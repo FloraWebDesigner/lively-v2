@@ -1,0 +1,22 @@
+.radioName{
+    font-family: "Righteous", serif;
+    /* font-weight: 400;
+    font-style: normal; */
+    background-color: transparent;
+    color: #848484;
+    transition: all ease-out 0.5s;
+    min-width: 28rem;
+}
+
+.radioName:hover{
+    color: white;
+    scale: 1.02;
+}
+
+.title{
+    letter-spacing:0.2em;
+}
+
+.min{
+    letter-spacing:0.1em;
+}

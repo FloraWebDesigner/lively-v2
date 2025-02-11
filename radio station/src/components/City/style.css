@@ -1,0 +1,19 @@
+select,
+.city,
+.optionCity {
+  color: #848484;
+  font-family: "Urbanist", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.5em;
+  background-color: transparent;
+}
+
+.city {
+  border: #848484 1px solid;
+}
+
+select option:hover {
+  background-color: #b80c09;
+}
