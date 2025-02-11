@@ -29,7 +29,7 @@ export default function RadioList() {
             key={s.id}
             min={s.minute}
             type={s.type_name}
-            host={s.host_id}
+            host={s.host_name}
              />
         ))}
         </div>
