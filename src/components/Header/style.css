@@ -1,3 +1,102 @@
 .twoLogo{
     color: #B80C09;
+    transform: scale(0.6);
+    transform-origin: bottom center;
 }
+
+.brickmmo{
+    font-family: "Lato", serif;
+    color:#ff0000;
+    transform: scale(0.6);
+}
+
+.brickmmo span{
+    font-weight: 300;
+    font-style: normal;
+    color:#ff5b00;
+}
+
+.img-container{
+    height: 7.82rem;
+    background-image: url("../../../public/img/logo.png");
+    background-size: contain;
+    background-position: center;
+    transition: background-image 0.1s ease-in-out;
+    transform: scale(0.6);
+    padding: 0;
+    margin: 0; 
+    width: 7rem;
+    transform-origin: bottom center;
+}
+
+.img-container:hover {
+    animation: slashAnimation 0.5s steps(1) infinite;
+}
+
+@keyframes slashAnimation {
+    0% { background-image: url('../../../public/img/logo.png'); }
+    33% { background-image: url('../../../public/img/logo2.png'); }
+    66% { background-image: url('../../../public/img/logo3.png'); }
+    100% { background-image: url('../../../public/img/logo.png'); }
+}
+
+.radio-heading{
+    font-family: "Righteous", serif;
+  font-style: normal;
+  font-size: 2.5rem;
+  line-height: 1.05;  
+}
+
+.radio-logo{
+    color:#B80c09;
+}
+
+.radio-heading-lg{
+    font-size: 3rem;
+    padding-top: 0;
+    margin-top: 0;
+    line-height: 1.05;
+}
+
+.station{
+    font-family: "Urbanist", serif;
+    letter-spacing:1.2em;
+    text-transform:uppercase;
+    padding-top: 0;
+    line-height: 1.05;
+    font-size: small;
+}
+
+.logo-container{
+    background-image: url("../../../public/img/radio3.png");
+    position: relative;
+    background-size: 58% auto; 
+    background-position: top 4% right 12%; 
+    background-repeat: no-repeat; 
+    transition: background-image 0.3s ease-in-out;
+    padding-top: 14%; 
+    max-width: 100%;
+    max-height: 100%;
+    transform: scale(0.7);
+    transform-origin: center center;
+}
+
+.logo-container:hover,
+.logo-container.playing {
+    animation: slashRadio 2s steps(1) infinite;
+}
+
+.logo-container:not(.playing):hover {
+    animation: slashRadio 2s steps(1) infinite;
+}
+
+@keyframes slashRadio {
+    0% { background-image: url("../../../public/img/radio3.png"); }
+    16.6% { background-image: url("../../../public/img/radio2.png"); }
+    33.3% { background-image: url("../../../public/img/radio1.png"); }
+    50% { background-image: url("../../../public/img/radio.png"); }
+    66.6% { background-image: url("../../../public/img/radio1.png"); }
+    83.3% { background-image: url("../../../public/img/radio2.png"); }
+    100% { background-image: url("../../../public/img/radio3.png"); }
+}
+
