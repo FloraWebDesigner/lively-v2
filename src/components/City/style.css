@@ -10,9 +10,9 @@ select,
   background-color: transparent;
 }
 
-.city {
+/* .city {
   border: #848484 1px solid;
-}
+} */
 
 select option:hover {
   background-color: #b80c09;

@@ -1,23 +1,24 @@
 import "./style.css"
-import { useContext } from "react";
-import { CityContext } from "../Context/CityContext";
+// import { useContext } from "react";
+// import { CityContext } from "../Context/CityContext";
 
 export default function City() {
-      const { CityID,setCityID } = useContext(CityContext);
+  //     const { CityID,setCityID } = useContext(CityContext);
 
-  const getCityValue = (e) => {
+  // const getCityValue = (e) => {
 
-    let cityValue = e.target.value;
-    if(cityValue === "smart_city"){
-      setCityID(1);
-    }else if(cityValue === "sec_city"){
-      setCityID(2);
-    }
-  }
+  //   let cityValue = e.target.value;
+  //   if(cityValue === "smart_city"){
+  //     setCityID(1);
+  //   }else if(cityValue === "sec_city"){
+  //     setCityID(2);
+  //   }
+  // }
 
   return (
     <>
-      <form>
+    <h2 className="city">Smart City</h2>
+      {/* <form>
         <select 
           name="city" 
           id="city" 
@@ -29,7 +30,7 @@ export default function City() {
           </option>
           <option value="sec_city" className="optionCity">Second City</option>
         </select>
-      </form>
+      </form> */}
     </>
   );
 }

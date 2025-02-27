@@ -29,7 +29,9 @@ export default function RadioList() {
             setSchedule(data_schedule.schedule);
         }
         getSchedule();
-    },[CityID]);
+    },[]
+    // [CityID]
+);
        
     
     return (
