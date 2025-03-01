@@ -5,30 +5,19 @@ import { CityContext } from "../Context/CityContext";
 import "./style.css";
 
 export default function RadioLogID({setIsPlaying}) {
-    const { LogID, setLogID } = useContext(LogContext);
-    const { ScheduleID, setScheduleID } = useContext(ScheduleContext);
-    const { CityID } = useContext(CityContext);
+    let { LogID, setLogID } = useContext(LogContext);
+    let { ScheduleID, setScheduleID } = useContext(ScheduleContext);
     const audioRef = useRef(null);
-    const [audioSrc, setAudioSrc] = useState("");
-
-
-    let getAudio = async () => {
-        const urlNext = `http://local.api.brickmmo.com:7777/radio/next/${CityID}`;
-        let resNext = await fetch(urlNext);
-        let data_audio = await resNext.json();
-        console.log("audio data: ",data_audio);
-        setLogID(data_audio.log.id);
-        setScheduleID(data_audio.log.schedule_id);
-    };
+    const [audioSrc, setAudioSrc] = useState('./radio/8.mp3');
 
     useEffect(() => {
-        getAudio();
-    }, [CityID]);
+        setLogID(1); 
+        setScheduleID(1); 
+    }, []);
 
     useEffect(() => {
-        console.log(LogID);
         if (LogID) {
-            const urlAudio = `http://local.api.brickmmo.com:7777/radio_queue/${LogID}.mp3`;
+            const urlAudio = `./radio/${LogID}.mp3`;
             setAudioSrc(urlAudio);
             console.log("set audio source");
         }
@@ -48,8 +37,8 @@ export default function RadioLogID({setIsPlaying}) {
         const myAudio = audioRef.current;  
         // console.log("audio source: ",audioSrc);
         const playNext = ()=>{
-            // console.log("Audio ended");
-            getAudio();
+            setLogID(prevLogID => prevLogID + 1); 
+            setScheduleID(prevScheduleID => prevScheduleID + 1);
             };
         const handlePlay =()=>{
             setIsPlaying(true);
