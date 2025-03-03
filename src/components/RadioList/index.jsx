@@ -22,8 +22,7 @@ export default function RadioList() {
         const getSchedule = async() =>{
             setSchedule([]);
             console.log(CityID);
-            let url_schedule = `http://local.api.brickmmo.com:7777/radio/schedule/${CityID}`;
-            let res_schedule = await fetch(url_schedule);
+            let res_schedule = await fetch('/schedule.json');
             let data_schedule = await res_schedule.json();
 
             setSchedule(data_schedule.schedule);
